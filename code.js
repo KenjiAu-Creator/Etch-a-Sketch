@@ -7,12 +7,11 @@ function createDiv() {
     return grid;
 }
 function setUpDiv() {
-    numOfRow = 127;
-    numOfCol = 127;
+    gridSize = 15;
     myGrid = [];
-    for(let j = 0; j <= numOfRow; j++) {
+    for(let j = 0; j <= gridSize; j++) {
         arrayOfDivs = [];
-        for (let i = 0; i <= numOfCol; i++) {
+        for (let i = 0; i <= gridSize; i++) {
             arrayOfDivs.push(createDiv());
             arrayOfDivs[i].className = `row${j}`;
             arrayOfDivs[i].id = `div${j}${i}`;
@@ -21,11 +20,13 @@ function setUpDiv() {
         myGrid.push(arrayOfDivs)
     }
 }
-// let test = document.getElementById("container");
-// test.addEventListener("mouseenter", function() {
-//     this.style.background = "black";
-// })
-// test.addEventListener("mouseleave", function() {
-//     this.style.background = "white";
-// })
+function createGrid() {
+    maxSize = 960;
+    eachSize = maxSize / gridSize;
+    Size = document.getElementById("container");
+    Size.style.display = `grid`;
+    Size.style.gridTemplateColumns = `repeat(${gridSize+1}, ${eachSize}px)`;
+    Size.style.gridTemplateRows = `repeat(${gridSize+1}, ${eachSize}px)`;
+};
 setUpDiv()
+createGrid()

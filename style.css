@@ -1,5 +1,5 @@
-#container {
+/* #container {
     display: grid;
-    grid-template-columns: repeat(128, 10px);
-    grid-template-rows: repeat(128, 10px);
-}
+    grid-template-columns: repeat(64, 10px);
+    grid-template-rows: repeat(64, 10px);
+} */
