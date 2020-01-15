@@ -1,9 +1,8 @@
 const container = document.querySelector("#container");
 function createDiv() {
     var board = document.createElement("div");
-    board.className = "blank";
     board.addEventListener(`mouseenter`, function() {
-        board.className = "Ink";
+        board.className = "ink";
     });
     return board;
 }
@@ -31,7 +30,7 @@ function resetGrid() {
     for(let i = 0; i <= myGrid.length-1; i++) {
         for(let j = 0; j <= myGrid[i].length-1; j++) {
             resetBlock = document.getElementById(`div${i}${j}`);
-            resetBlock.classList.remove("Ink");
+            resetBlock.classList.remove("ink");
         };
     };
 }

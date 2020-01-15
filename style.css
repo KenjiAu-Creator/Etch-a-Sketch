@@ -1,11 +1,3 @@
-/* #container {
-    display: grid;
-    grid-template-columns: repeat(64, 10px);
-    grid-template-rows: repeat(64, 10px);
-} */
-div.blank {
-    background-color: white;
-}
 div.ink {
     background-color: black;
 }
